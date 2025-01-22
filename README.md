@@ -1,2 +1,2 @@
-# client_project_html_w25
-SI 339 Client Project
+# Client_Project_Starter_Code
+Starter code for the Fall 2024 & Winter 2025 Client Project
