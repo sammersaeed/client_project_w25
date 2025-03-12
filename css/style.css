@@ -1,0 +1,321 @@
+/* html {
+    scroll-behavior: smooth;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} */
+
+body {
+    background-color: #ffffff;
+    font-size: 18px;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+}
+h1 {
+    font-size: 200%;
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 1.5;
+    padding: 3% 0;
+    text-align: center;
+    color: #00274C;
+}
+
+h2 {
+    font-size: 125%;
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 1.25;
+    /* padding-top: 5%; */
+    padding-bottom: 2%;
+    color: #702082;
+}
+
+h3 {
+    font-size: 100%;
+    line-height: 1.25;
+    color: #2F65A7;
+}
+section {
+    background: white;
+    padding: 2% 2% 5% 2%;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px #2f65a75b;
+}
+
+.header-container {
+    display: flex;
+    align-items: center; /* Align logo and nav vertically */
+    justify-content: space-between; /* Space between logo and nav */
+    padding: 3%; /* Adjust padding */
+    background-color: #FFCB05;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.logo{
+    display: inline;
+    width: 18%;
+}
+.logo img{
+    width: 75%;
+    height: auto;
+}
+
+nav {
+    display: inline;
+    width: 80%;
+    background-color: #00274C;
+    /* text-align: center; */
+    font-size: 95%;
+}
+
+/* Make the nav bar inline */
+nav ul {
+    list-style: none;
+    /* gap: 5%; Space between menu items */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav li {
+    display: inline;
+    padding: 2%; 
+    /* border: inset 1px #ffffff; */
+}
+
+nav a {
+    color: #ffffff; 
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.current{ /* FIXME: More decoration */
+    color: #FFCB05;
+    text-decoration: underline;
+    font-weight: boldest;
+    /* border: inset 1px #ffffff; */
+}
+
+
+.skip a {
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+
+img {
+    max-width: 100%; /* Ensures the image doesn't overflow */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra spacing */
+    padding-top: 5%;
+}
+
+
+footer {
+    background-color: #FFCB05;
+    color:#00274C;
+    padding: 5%;
+    text-align: center;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+    padding: 2%;
+    border: solid 2px #ffffff;
+}
+
+.skip a {
+    position: absolute;
+    top: -40px; /* Moves the element 40px above the parent's top */
+}
+
+.skip a:focus {
+    top: 50px; /* Moves the element 20px below parent's top */
+}
+
+*:focus {
+    border: solid 2px #000000; /* Adds a 2px solid black border to all elements in focus  */
+} 
+
+.resources{ /*Create indentation for numbered list on index page */
+    padding-left: 10%;
+    padding-top: 2%;
+    color: #2F65A7;
+}
+
+.physical-health{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 4%;
+}
+.physical-health figcaption
+{
+    text-align: center;
+    font-size: 0.75em;
+    font-weight: 525;
+}
+.uhs{
+    grid-column: 1 / span 1;
+    grid-row: 2;
+}
+
+.rec{
+    grid-column: 2 / span 1;
+    grid-row: 2;
+}
+
+.mental-health{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: center;
+}
+
+.caps{
+    grid-column: 1 / span 1;
+    grid-row: 2;
+}
+
+.wellness{
+    grid-column: 2 / span 1;
+    grid-row: 2;
+}
+
+.mindfulness{
+    grid-column: 1 / span 1;
+    grid-row: 3;
+}
+
+.support{
+    grid-column: 2 / span 1;
+    grid-row: 3;
+}
+
+.life-outside-classroom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: center;
+    list-style-type: none;
+}
+
+.life-outside-classroom>li{
+    width:95%;
+}
+
+.sorg{
+    grid-column: 1 / span 1;
+    grid-row: 1;
+}
+
+.arts-culture{
+    grid-column: 2 / span 1;
+    grid-row: 1;
+}
+
+#career-services{
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 50%;
+    justify-self: center;
+}
+
+.community-engagement{
+    grid-column: 1 / span 1;
+    grid-row: 3;
+}
+.housing-dining{
+    grid-column: 2 / span 1;
+    grid-row: 3;
+}
+
+main {
+    padding: 2%;
+}
+
+.tutoring{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: left;
+    list-style-type: disc;
+}
+.course-list {
+    padding-left: 3%
+}
+.course-list li {
+    padding-bottom: 2%;
+}
+.programming-tutoring{
+    grid-column: 1 / span 1;
+    grid-row: 1;
+    padding-left: 2%;
+}
+
+.math-tutoring{
+    grid-column: 2 / span 1;
+    grid-row: 1;
+}
+
+.other-tutoring{
+    grid-column: 1 / -1;
+    grid-row: 2;
+    text-align: center;
+    padding: 3%;
+    font-size: 0.85em;
+}
+
+.caps-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: left;
+    list-style-type: disc;
+}
+
+.caps-hours {
+    grid-column: 1 / span 1;
+    grid-row: 1;
+}
+
+.caps-contact {
+    grid-column: 2 / span 1;
+    grid-row: 1;
+}
+
+.caps-urgent {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    font-size: 1.5em;
+    font-weight: 550;
+    text-align: center;
+}
+
+p{
+    padding-bottom: 2%;
+}
+
+.firstgen-resources {
+    padding-left: 10%;
+}
+
+.tutoring-resources {
+    padding-left: 10%;
+    
+}
+/* .caps-info h2{
+    text-decoration:wavy;
+} */
+
+/* @media screen and (min-width: 800px) {
+    .container {
+        width: 800px;
+    }
+} */
