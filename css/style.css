@@ -37,7 +37,7 @@ h3 {
 }
 section {
     background: white;
-    padding: 2% 2% 5% 2%;
+    padding: 2% 2% 2% 2%;
     margin-bottom: 20px;
     box-shadow: 0px 4px 6px #2f65a75b;
 }
@@ -113,6 +113,7 @@ img {
     height: auto; /* Maintains aspect ratio */
     display: block; /* Removes extra spacing */
     padding-top: 5%;
+    justify-self: center;
 }
 
 
@@ -157,12 +158,14 @@ nav a:focus {
     gap: 15px;
     padding: 4%;
 }
+
 .physical-health figcaption
 {
     text-align: center;
     font-size: 0.75em;
     font-weight: 525;
 }
+
 .uhs{
     grid-column: 1 / span 1;
     grid-row: 2;
@@ -206,10 +209,12 @@ nav a:focus {
     gap: 15px;
     text-align: center;
     list-style-type: none;
+    justify-items: center;
 }
 
-.life-outside-classroom>li{
+.life-outside-classroom li{
     width:95%;
+    /* justify-content: center; */
 }
 
 .sorg{
@@ -221,7 +226,7 @@ nav a:focus {
     grid-row: 1;
 }
 
-#arts-culture {
+#arts-culture{
     grid-column: 1 / -1;
     grid-row: 2;
     width: 50%;
@@ -315,8 +320,223 @@ p{
     text-decoration:wavy;
 } */
 
-/* @media screen and (min-width: 800px) {
-    .container {
-        width: 800px;
+@media screen and (min-width: 800px) {
+    /* .container {
+        /* display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 2%; 
+    } */
+
+
+    .header-container {
+        display: flex;
+        /* align-items: center; Align logo and nav vertically */
+        justify-content: space-between; /* Space between logo and nav */
+        padding: 0 0 0.5% 0; /* Adjust padding */
+        background-color: #FFCB05;
+        font-family: "Nunito Sans", sans-serif;
     }
-} */
+    
+    .logo{
+        display: inline;
+        width: 10%;
+    }
+    .logo img{
+        width: 75%;
+        height: auto;
+    }
+    
+    nav {
+        display: inline;
+        width: 80%;
+        background-color: #00274C;
+        /* text-align: center; */
+        font-size: 95%;
+        /* align-self: last baseline;*?
+    } 
+    
+    /* Make the nav bar inline */
+    nav ul {
+        list-style: none;
+        /* gap: 5%; Space between menu items */
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    nav li {
+        display: inline;
+        padding: 1%; 
+        /* border: inset 1px #ffffff; */
+    }
+    
+    nav a {
+        color: #ffffff; 
+        font-weight: bold;
+        text-decoration: none;
+    } 
+
+    h1 {
+        padding: 1% 0;
+        
+    }
+    
+    h2 {
+        padding-bottom: 0;
+    }
+
+    h3{
+        padding: 1%;
+    }
+    .resources{ /*Create indentation for numbered list on index page */
+        padding-left: 10%;
+        padding-top: 2%;
+        color: #2F65A7;
+        font-weight: 550;
+    }
+    
+    .physical-health{
+        /* grid-column: 1 / span 2;
+        grid-row: 2; */
+        /*container portion*/
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 0 2%;
+    }
+    .physical-health figcaption
+    {
+        text-align: center;
+        font-size: 0.75em;
+        font-weight: 525;
+    }
+    .uhs{
+        grid-column: 1 / span 1;
+        grid-row: 2;
+    }
+    
+    .rec{
+        grid-column: 2 / span 1;
+        grid-row: 2;
+    }
+    
+    .mental-health{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 15px;
+        text-align: center;
+        padding: 0 2%;
+    }
+    
+    .caps{
+        grid-column: 1 / span 1;
+        grid-row: 2;
+    }
+    
+    .wellness{
+        grid-column: 2 / span 1;
+        grid-row: 2;
+    }
+    
+    .mindfulness{
+        grid-column: 3 / span 1;
+        grid-row: 2;
+    }
+    
+    .support{
+        grid-column: 4 / span 1;
+        grid-row: 2;
+    }
+    
+    .life-outside-classroom{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr); /* 12 equal columns */;
+        gap: 1rem;
+        text-align: center;
+        list-style-type: none;
+        justify-items: center;
+        padding: 0 2%;
+    }
+    
+    .life-outside-classroom li{
+        /* border: 1px dashed #ccc; */
+        width:95%; 
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        /* justify-content: center; */
+    }
+    
+    .sorg{
+        grid-column: 1 / span 4; /* columns 1–4 */
+        grid-row: 1;
+    }
+    .career-services {
+        grid-column: 5 / span 4; /* columns 5–8 */
+        grid-row: 1;
+    }
+    
+    #arts-culture{
+        grid-column: 9 / span 4; /* columns 9-12 */
+        grid-row: 1;
+        width: 100%;
+        justify-self: center;
+    }
+    
+    .community-engagement{
+        grid-column: 3 / span 4;
+        grid-row: 2;
+    }
+    .housing-dining{
+        grid-column: 7 / span 4;
+        grid-row: 2;
+    }
+
+    .physical-health img {
+        width: 100%;
+        height: 450px; /* or whatever height you prefer */
+        object-fit: cover;
+        display: block;
+        padding-top: 1%
+    }
+    section {
+        background: white;
+        padding: 2%;
+        margin-bottom: 20px;
+        box-shadow: 0px 4px 6px #2f65a75b;
+    }
+    p{
+        padding-bottom: 0%;
+    }
+
+    .caps-info{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+        text-align: left;
+        list-style-type: disc;
+    }
+    
+    .caps-hours {
+        grid-column: 1 / span 1;
+        grid-row: 1;
+    }
+    
+    .caps-contact {
+        grid-column: 2 / span 1;
+        grid-row: 1;
+    }
+    
+    .caps-urgent {
+        grid-column: 3 / span 1;
+        grid-row: 1;
+        font-size: 1.5em;
+        font-weight: 550;
+        text-align: center;
+        align-self: center;
+    }
+} 
+}

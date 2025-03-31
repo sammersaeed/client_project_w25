@@ -19,6 +19,7 @@
             <a href="index.html" class="logo">
             <img id="logo" src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
             </a>
+            
             <nav>
                 <ul>
                     <li class="current"><a href = "index.html" class="current">Home</a></li>
@@ -27,10 +28,11 @@
                     <li><a href = "tutoring.html">Tutoring</a></li>
                 </ul>
             </nav>
+        
         </div>
         <h1>Student Success Portal</h1>
     </header>
-    <main id="main">
+    <main id="main" class="container">
         <section class="welcome">
             <h2>Welcome to the UM Grad Success Navigator</h2>
             <p> Your Comprehensive Guide to Resources for Graduate School Success <br>
@@ -95,7 +97,7 @@
             <p>Graduate school is more than just academics. It's important to cultivate a balanced life. Here are some resources to help you enjoy life outside the classroom:</p>
             <br>
             <ul class="life-outside-classroom">
-                <li class="sorgs"><h3>Student Organizations:</h3> Join one of the many student organizations to connect with peers who share your interests and passions.</li>
+                <li class="sorg"><h3>Student Organizations:</h3> Join one of the many student organizations to connect with peers who share your interests and passions.</li>
                 <li class="career-services"><h3>Career Services:</h3> Utilize career counseling, job search resources, and networking opportunities to prepare for your professional future.</li>
                 <li id="arts-culture"><h3>Arts and Culture:</h3> Explore UM's vibrant arts scene with events, exhibitions, and performances happening year-round.</li>
                 <li class="community-engagement"><h3>Community Engagement:</h3> Get involved with local volunteering opportunities and community service projects to make a positive impact.</li>
@@ -107,7 +109,10 @@
         UMGPT. (2024). UMGPT (August 29th version) [Large language model]. -->
     </main>
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
-        </footer>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a> | © Copyrights <span id="year"></span> </p>
+    </footer>
+
+    <!-- was originally put at beginning of body but then DOM didn't load and id=year was not created before trying to update it-->
+    <script src="script.js"></script>
 </body>
 </html>

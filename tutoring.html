@@ -13,6 +13,7 @@
     <title>Tutoring</title>
 </head>
 <body>
+    
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <header>
         <div class="header-container">
@@ -72,6 +73,101 @@
                     <li>Services for Students with Disabilities</li>
                 </ul>
         </section>
+
+        <!-- FIXME : Add a form for contact-->
+        <section class="contact-form">
+            <!-- Label form "Contact the tutoring..."-->
+            <form action="https://formspree.io/f/mjkyrpww" method="POST">
+                <label for="name" required>
+                    Name:
+                    <input type="text" name="name" id="name">
+                </label>
+
+                <label for="email" required>
+                    Your email:
+                    <input type="email" name="email" id="email">
+                </label>
+
+                <!-- will determind if they should show classes that are just for MADS IADS 505, General Python, SIADS 502-->
+                <fieldset>
+                    <legend>Are you a member of the MADS program?</legend>
+                    <input type="radio" id="yesmads" name="mads" value="yes" required>
+                    <label for="yesmads">Yes</label>
+
+                    <input type="radio" id="nomads" name="mads" value="no">
+                    <label for="nomads">No</label>
+                </fieldset>
+
+                <!-- selection will determine the classes/drop downs that appear-->
+                <fieldset>
+                    <legend>What subject(s) are you looking for tutoring in?</legend>
+
+                    <input type="checkbox" id="programming" name="programming" value="programming">
+                    <label for="programming">Programming</label><br>
+                
+                    <input type="checkbox" id="math" name="math" value="math">
+                    <label for="math">Math</label><br>
+
+                    <span id="madscheckbox">   
+                        <input type="checkbox" id="mads" name="mads" value="mads">
+                        <label for="mads">MADS</label>
+                    </span>
+                </fieldset>
+                
+
+                <!-- <label for="subjects">Choose subjects:</label><br>
+
+                    <select name="subjects" id="subjects" multiple>
+                        <option value="programming">Programming</option>
+                        <option value="math">Math</option>
+                        <option value="mads">MADS</option>
+                        <option value="design">Design</option>
+                    </select><br><br>
+
+                </label> -->
+                <!-- include * for classes available for MADS as well-->
+                <fieldset>
+                    <legend>Choose classes:</legend>
+                    <span class="form-hint">Hold down ctrl key (cmd for mac) to select multiple</ span>
+                    <div id="programmingcourses">
+                        <label for="programmingselected" class= "courses" >
+                            <select name="programming-selected" id="programmingselected" multiple>
+                                <option value="SI 106">SI 106</option>
+                                <option value="SI 206">SI 206</option>
+                                <option value="SI 506">SI 506</option>
+                                <option value="SI 507">SI 507</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div id="mathcourses">
+                        <label for="mathselected" class = "courses">
+                            <select name="mathselected" id="mathselected" multiple>
+                                <option value="Linear Algebra">Linear Algebra*</option>
+                                <option value="Statistics">Statistics*</option>
+                                <option value="General Math">General Math*</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div id="madscourses">
+                        <label for="madsselected" class = "courses" >
+                            <select name="madsselected" id="madsselected" multiple>
+                                <option value="IADS 505">IADS 505</option>
+                                <option value="General Python">General Python</option>
+                                <option value="SIADS 502">SIADS 502</option>
+                            </select>
+                        </label>
+                    </div>
+                    <!--FIXME : add how to select multiple-->
+                </fieldset>
+                <label for="message">
+                    Message:
+                    <textarea name="message" id="message"></textarea>
+                    <!-- FIXED : Add default message?-->
+                    <!-- "Please update the message as you see fit"-->
+                </label>
+                <button type="submit">Send</button>
+            </form>
+        </section>
         <section class="contact">
             <h3>Contact</h3>
             <p>E-Mail: <a href="mailto:umsi.academicsuccess@umich.edu ">umsi.academicsuccess@umich.edu</a> <br>
@@ -82,9 +178,10 @@
         </section>
     </main>
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
-        </footer>
-    
-</body>
+        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a> | © Copyrights <span id="year"></span></p>
+    </footer>
 
+    <!-- was originally put at beginning of body but then DOM didn't load and id=year was not created before trying to update it-->
+    <script src="script.js"></script>
+</body>
 </html>
