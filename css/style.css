@@ -534,9 +534,9 @@ p{
         margin-bottom: 20px;
         box-shadow: 0px 4px 6px #2f65a75b;
     }
-    p{
+    /* p{
         padding-bottom: 0%;
-    }
+    } */
 
     .caps-info{
         display: grid;
@@ -565,4 +565,3 @@ p{
         align-self: center;
     }
 } 
-}
