@@ -320,6 +320,10 @@ p{
     text-decoration:wavy;
 } */
 
+.error404{
+    text-align: center;
+}
+
 @media screen and (min-width: 800px) {
     /* .container {
         /* display: grid;
